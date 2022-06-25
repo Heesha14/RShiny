@@ -1,0 +1,22 @@
+shows which part of code is being executed
+runApp("census-app", display.mode = "showcase")
+
+$ <- to go to a specific location
+
+
+
+
+"selected_var" <- the UI object
+we need to get that as the reactive output
+
+thus need to give it as the output of the server function
+
+selected_var must be equal as such in input UI
+renderText as we retrive text
+
+ output$selected_var <- renderText({ 
+    paste("You have selected this",input$var)
+  })
+
+
+when slider input, shiny knows slider has to values of min and max
