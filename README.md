@@ -36,6 +36,10 @@
 > runApp("my_app")
 > ```
 
+> ```shell
+> runApp("my_app", display.mode = "showcase")
+> ```
+
 
 ### Tools
 ***
