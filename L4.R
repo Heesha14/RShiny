@@ -27,10 +27,7 @@ ui <- fluidPage(titlePanel("censusVis"),
                   ),
                   
                   #textOutput indicates our output variabe will be a text
-                  mainPanel(
-                    textOutput("selected_var"),
-                    textOutput("min_max")
-                    )
+                  mainPanel(textOutput("selected_var"))
                 ))
 
 
@@ -46,11 +43,7 @@ server <- function(input, output) {
   # build the object
   # Ui object is text then renderText
   output$selected_var <- renderText({ 
-    paste("You have chosen range that goes from",input$range[1]," to ",input$range[2])
-  })
-  
-  output$min_max <- renderText({
-    
+    paste("You have selected this",input$var)
   })
   
 }
